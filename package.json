@@ -1,0 +1,37 @@
+{
+  "name": "@ryanmorr/avalon-todomvc",
+  "description": "TodoMVC done with avalon",
+  "version": "0.1.0",
+  "license": "Unlicense",
+  "author": "Ryan Morr",
+  "homepage": "https://github.com/ryanmorr/avalon-todomvc",
+  "repository": "github:ryanmorr/avalon-todomvc",
+  "bugs": "https://github.com/ryanmorr/avalon-todomvc/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server dist",
+    "build": "rm -rf dist && mkdirp dist/todomvc-common && ncp src/index.html dist/index.html && rollup -c rollup.config.js && cp node_modules/todomvc-common/base.* dist/todomvc-common/ && cp node_modules/todomvc-app-css/index.css dist/todomvc.css",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "gh-pages": "^0.12.0",
+    "http-server": "^0.9.0",
+    "mkdirp": "^0.5.3",
+    "ncp": "^2.0.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-babel-minify": "^8.0.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "dependencies": {
+    "@ryanmorr/avalon": "file:../avalon",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.2"
+  }
+}
