@@ -1,5 +1,5 @@
 {
-  "name": "@ryanmorr/avalon-todomvc",
+  "name": "avalon-todomvc",
   "description": "TodoMVC done with avalon",
   "version": "0.1.0",
   "license": "Unlicense",
