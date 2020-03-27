@@ -11,7 +11,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "http-server",
+    "dev": "npm run build && http-server",
     "build": "rm -rf dist && mkdirp dist/todomvc-common && rollup -c rollup.config.js && cp node_modules/todomvc-common/base.* dist/todomvc-common/ && cp node_modules/todomvc-app-css/index.css dist/todomvc.css"
   },
   "devDependencies": {
