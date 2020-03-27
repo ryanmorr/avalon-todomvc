@@ -4,7 +4,7 @@ import babel from 'rollup-plugin-babel';
 import minify from 'rollup-plugin-babel-minify';
 
 export default {
-	input: 'src/index.js',
+	input: 'src/app.js',
 	output: {
 		dir: 'dist',
 		file: 'app.js',

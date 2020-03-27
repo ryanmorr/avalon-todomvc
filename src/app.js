@@ -22,7 +22,7 @@ const initialState = store && JSON.parse(store) || {
 
 const app = avalon(initialState);
 
-app.mutate({
+app.mutation({
     newTodo: (state, value) => ({
         newTodo: value
     }),
@@ -119,7 +119,7 @@ app.action({
     }
 });
 
-app.on('mutate', (name, state) => {
+app.on('mutation', (name, state) => {
     localStorage[NAMESPACE] = JSON.stringify(state);
 });
 
