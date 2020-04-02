@@ -7,11 +7,8 @@
   "homepage": "https://github.com/ryanmorr/avalon-todomvc",
   "repository": "github:ryanmorr/avalon-todomvc",
   "bugs": "https://github.com/ryanmorr/avalon-todomvc/issues",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "dev": "npm run build && http-server",
+    "start": "npm run build && http-server",
     "build": "rm -rf dist && mkdirp dist/todomvc-common && rollup -c rollup.config.js && cp node_modules/todomvc-common/base.* dist/todomvc-common/ && cp node_modules/todomvc-app-css/index.css dist/todomvc.css"
   },
   "devDependencies": {
@@ -26,7 +23,7 @@
     "rollup-plugin-node-resolve": "^4.0.0"
   },
   "dependencies": {
-    "@ryanmorr/avalon": "file:../avalon",
+    "@ryanmorr/avalon": "^0.1.0",
     "todomvc-app-css": "^2.1.0",
     "todomvc-common": "^1.0.2"
   }
